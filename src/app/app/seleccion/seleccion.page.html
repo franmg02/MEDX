@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title *ngFor="let p of newQuestion">{{p.pos}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar animated (ionChange)="buscar( $event )">
+
+  </ion-searchbar>
+  <ion-list>
+    <ion-item *ngFor = "let q of newQuestion" full (click)="createQuestions(q.patologia)" >
+      {{q.pregunta}}
+    </ion-item>
+  </ion-list>
+</ion-content>
