@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PreguntasPage } from '../preguntas/preguntas.page';
 import { Preguntas } from '../preguntas/preguntas';
 import { AnswerQuestionPage } from '../answer-question/answer-question.page';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -12,7 +13,7 @@ import { AnswerQuestionPage } from '../answer-question/answer-question.page';
 export class SeleccionPage implements OnInit {
 
 
-  constructor() {
+  constructor( private router: Router ) {
 
   }
 
@@ -38,6 +39,7 @@ newQuestion: Preguntas[] = PreguntasPage.getQuestion();
   PreguntasPage.setNewQuest(bancoPreguntas);
   PreguntasPage.fillZeros();
   localStorage.setItem( 'newQuestion' , JSON.stringify(bancoPreguntas));
+  this.router.navigate(['answer-question']);
   return bancoPreguntas;
     }
 
