@@ -1,1 +1,13 @@
 
+.top-50{
+    margin-top: 50px
+}
+
+ion-icon {
+    position: absolute;
+    top:70%;
+    left: 50%;
+    height: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 256px;
+  }
