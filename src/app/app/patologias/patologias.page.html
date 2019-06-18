@@ -1,18 +1,17 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>patologias</ion-title>
+    <ion-title>Patologías encontradas</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-card>
+  <ion-card *ngFor='let m of patologiaMostrada'>
     <ion-card-header>
-      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-      <ion-card-title>Card Title</ion-card-title>
+      <ion-card-subtitle>Usted puede presentar:</ion-card-subtitle>
+      <ion-card-title >{{m.nombre}}</ion-card-title>
     </ion-card-header>
   
     <ion-card-content>
-      Keep close to Nature's heart... and break clear away, once in awhile,
-      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+      {{m.recomendaciones}}
     </ion-card-content>
   </ion-card>
 </ion-content>

@@ -31,6 +31,7 @@ export class PatologiasPage implements OnInit {
 
   constructor(private http: HttpClient) {
     this.llegada = [];
+    this.patologiaMostrada = [];
     this.predecir();
    }
    patologia: Patologia[] = [
@@ -81,14 +82,15 @@ export class PatologiasPage implements OnInit {
    ];
 
    llegada: number[];
+   patologiaMostrada: Patologia[];
 
   ngOnInit() {
+
   }
 
   convIntToString(): string {
     var cadena: string;
     const result = JSON.parse(localStorage.getItem('resultado')) as number[];
-    console.log(result);
     cadena = '[ ';
 // tslint:disable-next-line: prefer-for-of
     for ( var i = 0; i < result.length; i++) {
@@ -106,11 +108,12 @@ export class PatologiasPage implements OnInit {
     const headers = new HttpHeaders();
     headers.append('Accept', 'application/json');
     headers.append('Content-Type', 'application/json' );
-
+    console.log('predice');
     return this.http.post('http://25.13.173.10/webserver/script.php', arreglo, {responseType: 'text'})
     .subscribe(data => {
       this.llegada = this.ConvStrToInt(data);
       console.log(this.llegada);
+      this.comparePat(this.patologia, this.llegada);
      }, error => {
       console.log(error);
     });
@@ -129,5 +132,17 @@ export class PatologiasPage implements OnInit {
       nuevoArray.push(parseInt(numero[i], 10));
     }
     return nuevoArray;
+  }
+
+  comparePat(original: Patologia[], decidir: number[]) {
+    console.log('entra al metodo');
+    console.log(original);
+    console.log(decidir);
+    for( var i = 0; i < decidir.length; i++){
+      if(decidir[i] !== 0) {
+        this.patologiaMostrada.push(original[i]);
+        console.log(this.patologiaMostrada);
+      }
+    }
   }
 }
