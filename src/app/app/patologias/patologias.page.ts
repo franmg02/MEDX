@@ -30,7 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
 export class PatologiasPage implements OnInit {
 
   constructor(private http: HttpClient) {
-    this.llegada = '';
+    this.llegada = [];
     this.predecir();
    }
    patologia: Patologia[] = [
@@ -80,7 +80,7 @@ export class PatologiasPage implements OnInit {
     },
    ];
 
-   llegada: string;
+   llegada: number[];
 
   ngOnInit() {
   }
@@ -109,11 +109,25 @@ export class PatologiasPage implements OnInit {
 
     return this.http.post('http://25.13.173.10/webserver/script.php', arreglo, {responseType: 'text'})
     .subscribe(data => {
-      this.llegada = data;
-      console.log(data);
+      this.llegada = this.ConvStrToInt(data);
+      console.log(this.llegada);
      }, error => {
       console.log(error);
     });
 
 }
+
+  ConvStrToInt(numero: string): number[]{
+    numero = numero.substr(11, 30);
+    for ( var i = 0; i < numero.length; i++){
+    numero = numero.replace(',', '');
+    }
+    numero = numero.substr(0, 11);
+    var nuevoArray: number[];
+    nuevoArray = [];
+    for(var i = 0; i < numero.length; i++){
+      nuevoArray.push(parseInt(numero[i], 10));
+    }
+    return nuevoArray;
+  }
 }
