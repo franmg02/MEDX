@@ -31,6 +31,7 @@ export class PatologiasPage implements OnInit {
 
   constructor(private http: HttpClient) {
     this.llegada = '';
+    this.predecir();
    }
    patologia: Patologia[] = [
      {
