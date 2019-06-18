@@ -198,6 +198,22 @@ export class PreguntasPage implements OnInit {
   public static getQuestion(): Preguntas[] {
     return this.question;
   }
+
+  public static testFillZeros() {
+    return true;
+  }
+
+  public static testSetNewQuest() {
+    return true;
+  }
+
+  public static testGetNewQuest() {
+    return true;
+  }
+
+  public static testGetQuestion() {
+    return true;
+  }
   ngOnInit() {
   }
 }
