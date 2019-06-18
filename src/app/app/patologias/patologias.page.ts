@@ -102,7 +102,6 @@ export class PatologiasPage implements OnInit {
 
   predecir() {
     let arreglo = '[ 0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 ]';
-    console.log(arreglo);
     const headers = new HttpHeaders();
     headers.append('Accept', 'application/json');
     headers.append('Content-Type', 'application/json' );
@@ -110,6 +109,7 @@ export class PatologiasPage implements OnInit {
     return this.http.post('http://25.13.173.10/webserver/script.php', arreglo, {responseType: 'text'})
     .subscribe(data => {
       this.llegada = data;
+      console.log(data);
      }, error => {
       console.log(error);
     });
