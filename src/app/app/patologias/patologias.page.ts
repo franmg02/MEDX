@@ -101,7 +101,7 @@ export class PatologiasPage implements OnInit {
   }
 
   predecir() {
-    let arreglo = this.convIntToString();
+    let arreglo = '[ 0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 ]';
     console.log(arreglo);
     const headers = new HttpHeaders();
     headers.append('Accept', 'application/json');
