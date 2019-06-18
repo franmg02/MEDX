@@ -178,11 +178,11 @@ export class PreguntasPage implements OnInit {
     for ( var i = 0; i < this.question.length; i++) {
       if (this.result.length !== this.question.length) {
         this.result.push(0);
-        localStorage.setItem( 'resultado' , JSON.stringify(this.result));
       } else {
-        console.log('ya está lleno');
+        this.result[i] = 0;
       }
     }
+    localStorage.setItem( 'resultado' , JSON.stringify(this.result));
     console.log(this.result);
   }
 
