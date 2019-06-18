@@ -31,7 +31,7 @@ export class AnswerQuestionPage implements OnInit {
     this.i++;
   } else {
     console.log(this.i);
-    this.router.navigate(['seleccion']);
+    this.router.navigate(['patologias']);
   }
   }
   ngOnInit() {

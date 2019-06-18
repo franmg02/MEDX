@@ -1,5 +1,7 @@
 {
   "name": "MEDX",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

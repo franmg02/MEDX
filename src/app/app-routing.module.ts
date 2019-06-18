@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: 'preguntas', loadChildren: './app/preguntas/preguntas.module#PreguntasPageModule' },
   { path: 'seleccion', loadChildren: './app/seleccion/seleccion.module#SeleccionPageModule' },
   { path: 'answer-question', loadChildren: './app/answer-question/answer-question.module#AnswerQuestionPageModule' },
+  { path: 'patologias', loadChildren: './app/patologias/patologias.module#PatologiasPageModule' },
 ];
 
 @NgModule({
