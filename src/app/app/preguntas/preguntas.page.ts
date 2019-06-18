@@ -63,10 +63,112 @@ export class PreguntasPage implements OnInit {
       pos: 7
     },
     {
-      pregunta: '¿El paciente tiene diarrea con sangre?',
-      respuestas: [{number: 1, string: 'Si'}, {number: 0, string: 'No'}],
-      patologia: ['disenteria'],
+      pregunta: '¿El paciente puede tomar o beber liquidos?',
+      respuestas: [{number: 0, string: 'Si'}, {number: 1, string: 'No'}],
+      patologia: ['Enfermedad Grave'],
       pos: 8
+    },
+    {
+      pregunta: '¿El paciente vomita lo que come?',
+      respuestas: [{number: 1, string: 'Si'}, {number: 0, string: 'No'}],
+      patologia: ['Enfermedad Grave'],
+      pos: 9
+    },
+    {
+      pregunta: '¿El paciente ha convulsionado?',
+      respuestas: [{number: 1, string: 'Si'}, {number: 0, string: 'No'}],
+      patologia: ['Enfermedad Grave'],
+      pos: 10
+    },
+    {
+      pregunta: '¿El paciente se ve mal?',
+      respuestas: [{number: 1, string: 'Si'}, {number: 0, string: 'No'}],
+      patologia: ['Enfermedad Grave'],
+      pos: 11
+    },
+    {
+      pregunta: '¿El paciente presenta fontanela abmbada?',
+      respuestas: [{number: 1, string: 'Si'}, {number: 0, string: 'No'}],
+      patologia: ['Enfermedad Grave'],
+      pos: 12
+    },
+    {
+      pregunta: '¿El paciente se queja?',
+      respuestas: [{number: 1, string: 'Si'}, {number: 0, string: 'No'}],
+      patologia: ['Enfermedad Grave'],
+      pos: 13
+    },
+    {
+      pregunta: '¿El paciente tiene estidor o sibilancias?',
+      respuestas: [{number: 1, string: 'Si'}, {number: 0, string: 'No'}],
+      patologia: ['Enfermedad Grave'],
+      pos: 14
+    },
+    {
+      pregunta: '¿El paciente tiene distensión abdominal?',
+      respuestas: [{number: 1, string: 'Si'}, {number: 0, string: 'No'}],
+      patologia: ['Enfermedad Grave'],
+      pos: 15
+    },
+    {
+      pregunta: '¿El paciente ha orinado menos de 4 veces en las ultimas 24 horas?',
+      respuestas: [{number: 1, string: 'Si'}, {number: 0, string: 'No'}],
+      patologia: ['Enfermedad Grave'],
+      pos: 16
+    },
+    {
+      pregunta: '¿El paciente tiene VIH?',
+      respuestas: [{number: 1, string: 'Si'}, {number: 0, string: 'No'}],
+      patologia: ['Enfermedad Grave'],
+      pos: 17
+    },
+    {
+      pregunta: '¿El paciente tiene alguna secresión conjuntivial purulenta?',
+      respuestas: [{number: 1, string: 'Si'}, {number: 0, string: 'No'}],
+      patologia: ['Conjuntivitis'],
+      pos: 18
+    },
+    {
+      pregunta: '¿El paciente tiene secresión purulenta en ombligo?',
+      respuestas: [{number: 1, string: 'Si'}, {number: 0, string: 'No'}],
+      patologia: ['Onfalitis'],
+      pos: 19
+    },
+    {
+      pregunta: '¿El paciente presenta pustulas en la piel?',
+      respuestas: [{number: 1, string: 'Si'}, {number: 0, string: 'No'}],
+      patologia: ['Impetigo'],
+      pos: 20
+    },
+    {
+      pregunta: '¿El paciente tiene placa blanquecina en la boca?',
+      respuestas: [{number: 1, string: 'Si'}, {number: 0, string: 'No'}],
+      patologia: ['Candidiasis oral'],
+      pos: 21
+    },
+    {
+      pregunta: '¿El paciente tiene secresión conjuntivial con edema?',
+      respuestas: [{number: 1, string: 'Si'}, {number: 0, string: 'No'}],
+      patologia: ['Conjuntivitis grave'],
+      pos: 22
+    },
+    {
+      pregunta: '¿El paciente tiene signos de enfermedad grave?',
+      respuestas: [{number: 1, string: 'Si'}, {number: 0, string: 'No'}],
+      patologia: ['Conjuntivitis grave'],
+      pos: 23
+    },
+    {
+      pregunta: '¿El paciente tiene secresión + eritema en ombligo?',
+      respuestas: [{number: 1, string: 'Si'}, {number: 0, string: 'No'}],
+      patologia: ['Onfalitis Grave'],
+      pos: 24
+    },
+    {
+      pregunta: '¿El paciente tiene ddemasiadas pustulas en la piel?',
+      respuestas: [{number: 1, string: 'Si'}, {number: 0, string: 'No'}],
+      patologia: ['Impetigo Grave'],
+      pos: 25
     }
   ];
 
