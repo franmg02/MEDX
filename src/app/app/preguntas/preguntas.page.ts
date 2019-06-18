@@ -71,13 +71,13 @@ export class PreguntasPage implements OnInit {
   ];
 
   static result: number[] = [];
-  public static fillZeros(){
+  public static fillZeros() {
 
-    for(var i=0; i < this.question.length; i++) {
+    for ( var i = 0; i < this.question.length; i++) {
       if (this.result.length !== this.question.length) {
         this.result.push(0);
         localStorage.setItem( 'resultado' , JSON.stringify(this.result));
-      } else{
+      } else {
         console.log('ya está lleno');
       }
     }

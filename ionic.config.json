@@ -3,5 +3,11 @@
   "integrations": {
     "cordova": {}
   },
-  "type": "angular"
+  "type": "angular",
+  "proxies": [
+    {
+      "path": "/patologias",
+      "proxyUrl": "http://25.13.173.10/webserver"
+    }
+  ]
 }
