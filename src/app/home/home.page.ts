@@ -10,9 +10,6 @@ export class HomePage {
 
   constructor() {
     console.log(PreguntasPage.testFillZeros());
-    console.log(PreguntasPage.testGetNewQuest());
-    console.log(PreguntasPage.testGetQuestion());
-    console.log(PreguntasPage.testSetNewQuest());
   }
 
 }

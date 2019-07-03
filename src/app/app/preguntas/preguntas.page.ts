@@ -200,20 +200,20 @@ export class PreguntasPage implements OnInit {
   }
 
   public static testFillZeros() {
-    return true;
+    for ( var i = 0; i < this.question.length; i++) {
+      if (this.result.length !== this.question.length) {
+        this.result.push(0);
+      } else {
+        this.result[i] = 0;
+      }
+    }
+
+    if(this.result.length === 26){
+      return true;
+    }
+
   }
 
-  public static testSetNewQuest() {
-    return true;
-  }
-
-  public static testGetNewQuest() {
-    return true;
-  }
-
-  public static testGetQuestion() {
-    return true;
-  }
   ngOnInit() {
   }
 }

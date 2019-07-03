@@ -14,7 +14,7 @@ export class SeleccionPage implements OnInit {
 
 
   constructor( private router: Router ) {
-
+    this.testCreateQuestions();
   }
 
 public questBank: Preguntas[];
@@ -47,6 +47,26 @@ newQuestion: Preguntas[] = PreguntasPage.getQuestion();
     return this.questBank;
   }
 
+  public testCreateQuestions(){
+    var array: string[];
+    array = ['diarrea'];
+    const preguntaAux = this.newQuest;
+    var bancoPreguntas: Preguntas[];
+    bancoPreguntas = [];
+  
+    for (var i = 0; i < preguntaAux.length; i++) {
+        for (var j = 0; j < preguntaAux[i].patologia.length; j++) {
+          for (var k = 0; k < array.length; k++) {
+            if ( preguntaAux[i].patologia[j] === array[k]) {
+              bancoPreguntas.push(preguntaAux[i]);
+                      }
+          }
+        }
+      }
+    if (preguntaAux[1] === this.newQuest[1]) {
+      return true;
+    }
+  }
   ngOnInit() {
   }
 
