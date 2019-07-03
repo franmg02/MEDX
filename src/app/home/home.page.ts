@@ -9,7 +9,7 @@ import { PreguntasPage } from '../app/preguntas/preguntas.page';
 export class HomePage {
 
   constructor() {
-    console.log(PreguntasPage.testFillZeros());
+
   }
 
 }

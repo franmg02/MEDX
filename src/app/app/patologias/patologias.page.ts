@@ -109,7 +109,7 @@ export class PatologiasPage implements OnInit {
     headers.append('Accept', 'application/json');
     headers.append('Content-Type', 'application/json' );
     console.log('predice');
-    return this.http.post('http://25.13.173.10/webserver/script.php', arreglo, {responseType: 'text'})
+    return this.http.post('http://medxfast.sytes.net/webserver/script.php', arreglo, {responseType: 'text'})
     .subscribe(data => {
       this.llegada = this.ConvStrToInt(data);
       console.log(this.llegada);
